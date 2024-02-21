@@ -1,3 +1,4 @@
+
 class Writer
   def initialize(name, genre, bestseller)
     @name = name
@@ -23,3 +24,15 @@ class Painter
     "Name: #{@name}\nMedium: #{@medium}\nMagnum Opus:#{@magnumopus}"
   end
 end
+
+def showcase_talent(artists)
+  artists.each do |a|
+    puts "#{a.create}\n ------------------"
+  end
+end
+
+greg = Writer.new("Greg", "Horror", "The Darkness of Daylight")
+duo = Painter.new("Duo", "Acrylic", "Sadness")
+
+artists = [greg, duo]
+showcase_talent(artists)
